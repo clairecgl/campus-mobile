@@ -1,6 +1,6 @@
+import 'package:campus_mobile_experimental/app_constants.dart';
 import 'package:campus_mobile_experimental/core/models/availability.dart';
 import 'package:campus_mobile_experimental/ui/availability/availability_constants.dart';
-import 'package:campus_mobile_experimental/app_constants.dart';
 import 'package:flutter/material.dart';
 
 class AvailabilityDisplay extends StatelessWidget {
@@ -70,7 +70,7 @@ class AvailabilityDisplay extends StatelessWidget {
                       (100 * percentAvailability(subLocation))
                               .toInt()
                               .toString() +
-                          '% Availability',
+                          '% Busy',
                       // style: TextStyle(color: Colors.black),
                     )),
                 Align(
