@@ -124,14 +124,22 @@ class AvailabilityDisplay extends StatelessWidget {
     );
   }
 
-  num percentAvailability(SubLocations location) => 1 - location.percentage!;
+  percentAvailability(SubLocations location) {
+    if (location.percentage! > 1) {
+      return 1;
+    } else if (location.percentage! > 0) {
+      return location.percentage;
+    } else {
+      return 0;
+    }
+  }
 
   setIndicatorColor(num percentage) {
     if (percentage >= .75)
-      return Colors.green;
+      return Colors.red;
     else if (percentage >= .25)
       return Colors.yellow;
     else
-      return Colors.red;
+      return Colors.green;
   }
 }
